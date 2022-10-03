@@ -12,7 +12,7 @@ import Foundation
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - Heroes
 struct Heroes: Codable {
     let data: DataClass
 }

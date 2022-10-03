@@ -11,13 +11,15 @@
 		6A65DD8D28E6352600772981 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A65DD8C28E6352600772981 /* Extensions.swift */; };
 		6A93421E28E51B140014C42C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A93421D28E51B140014C42C /* AppDelegate.swift */; };
 		6A93422028E51B140014C42C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A93421F28E51B140014C42C /* SceneDelegate.swift */; };
-		6A93422228E51B140014C42C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A93422128E51B140014C42C /* ViewController.swift */; };
+		6A93422228E51B140014C42C /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A93422128E51B140014C42C /* HeroesViewController.swift */; };
 		6A93422528E51B140014C42C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A93422328E51B140014C42C /* Main.storyboard */; };
 		6A93422728E51B160014C42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A93422628E51B160014C42C /* Assets.xcassets */; };
 		6A93422A28E51B160014C42C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A93422828E51B160014C42C /* LaunchScreen.storyboard */; };
 		6A93423428E51B870014C42C /* HeroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A93423328E51B870014C42C /* HeroData.swift */; };
 		6A93423728E51C3A0014C42C /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A93423628E51C3A0014C42C /* HeroViewModel.swift */; };
 		6ABB2A8D28EB2973005B96B7 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB2A8C28EB2973005B96B7 /* HeroModel.swift */; };
+		6ABB2A9228EB63DF005B96B7 /* HeroeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB2A9028EB63DF005B96B7 /* HeroeTableViewCell.swift */; };
+		6ABB2A9328EB63DF005B96B7 /* HeroeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ABB2A9128EB63DF005B96B7 /* HeroeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +28,7 @@
 		6A93421A28E51B140014C42C /* Marvel-Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel-Comics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A93421D28E51B140014C42C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A93421F28E51B140014C42C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6A93422128E51B140014C42C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A93422128E51B140014C42C /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
 		6A93422428E51B140014C42C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A93422628E51B160014C42C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A93422928E51B160014C42C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		6A93423328E51B870014C42C /* HeroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroData.swift; sourceTree = "<group>"; };
 		6A93423628E51C3A0014C42C /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
 		6ABB2A8C28EB2973005B96B7 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		6ABB2A9028EB63DF005B96B7 /* HeroeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeTableViewCell.swift; sourceTree = "<group>"; };
+		6ABB2A9128EB63DF005B96B7 /* HeroeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroeTableViewCell.xib; sourceTree = "<group>"; };
 		7891B9736694D67EE82E9C5B /* Pods_Marvel_Comics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel_Comics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F942D6615B86A112CD1316D /* Pods-Marvel-Comics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel-Comics.debug.xcconfig"; path = "Target Support Files/Pods-Marvel-Comics/Pods-Marvel-Comics.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,9 +89,11 @@
 		6A93423128E51B340014C42C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6A93422128E51B140014C42C /* ViewController.swift */,
+				6A93422128E51B140014C42C /* HeroesViewController.swift */,
 				6A93422328E51B140014C42C /* Main.storyboard */,
 				6A65DD8C28E6352600772981 /* Extensions.swift */,
+				6ABB2A9028EB63DF005B96B7 /* HeroeTableViewCell.swift */,
+				6ABB2A9128EB63DF005B96B7 /* HeroeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A93422A28E51B160014C42C /* LaunchScreen.storyboard in Resources */,
+				6ABB2A9328EB63DF005B96B7 /* HeroeTableViewCell.xib in Resources */,
 				6A93422728E51B160014C42C /* Assets.xcassets in Resources */,
 				6A93422528E51B140014C42C /* Main.storyboard in Resources */,
 			);
@@ -250,7 +257,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A93422228E51B140014C42C /* ViewController.swift in Sources */,
+				6A93422228E51B140014C42C /* HeroesViewController.swift in Sources */,
+				6ABB2A9228EB63DF005B96B7 /* HeroeTableViewCell.swift in Sources */,
 				6A65DD8D28E6352600772981 /* Extensions.swift in Sources */,
 				6A93421E28E51B140014C42C /* AppDelegate.swift in Sources */,
 				6A93422028E51B140014C42C /* SceneDelegate.swift in Sources */,
