@@ -20,25 +20,25 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bFL-Qr-tBa">
                         <rect key="frame" x="5" y="5" width="100" height="100"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="5GH-p0-YKX"/>
-                            <constraint firstAttribute="height" constant="100" id="RrW-sP-8wz"/>
+                            <constraint firstAttribute="width" constant="100" id="azD-X5-2cW"/>
+                            <constraint firstAttribute="height" constant="100" id="sCS-yj-hO9"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz7-rj-boA">
-                        <rect key="frame" x="115" y="5" width="338" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="115" y="5" width="338" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Rz7-rj-boA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="5RZ-kY-GQn"/>
-                    <constraint firstItem="bFL-Qr-tBa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="FCX-D3-fJn"/>
-                    <constraint firstItem="Rz7-rj-boA" firstAttribute="leading" secondItem="bFL-Qr-tBa" secondAttribute="trailing" constant="10" id="Lc7-P7-7ea"/>
-                    <constraint firstItem="bFL-Qr-tBa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NXN-BH-2dc"/>
-                    <constraint firstAttribute="bottom" secondItem="Rz7-rj-boA" secondAttribute="bottom" constant="5" id="TGv-oA-yRh"/>
-                    <constraint firstAttribute="trailing" secondItem="Rz7-rj-boA" secondAttribute="trailing" constant="5" id="c4z-Fk-rGp"/>
-                    <constraint firstAttribute="bottom" secondItem="bFL-Qr-tBa" secondAttribute="bottom" constant="5" id="zVg-un-AUc"/>
+                    <constraint firstAttribute="trailing" secondItem="Rz7-rj-boA" secondAttribute="trailing" constant="5" id="6yZ-nn-1FY"/>
+                    <constraint firstItem="bFL-Qr-tBa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="SKf-gK-M9U"/>
+                    <constraint firstItem="Rz7-rj-boA" firstAttribute="leading" secondItem="bFL-Qr-tBa" secondAttribute="trailing" constant="10" id="T5H-Nt-Oum"/>
+                    <constraint firstItem="Rz7-rj-boA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ac0-ue-y9C"/>
+                    <constraint firstAttribute="bottom" secondItem="bFL-Qr-tBa" secondAttribute="bottom" constant="5" id="hqS-YD-Wtr"/>
+                    <constraint firstAttribute="bottom" secondItem="Rz7-rj-boA" secondAttribute="bottom" constant="5" id="kVW-6x-poP"/>
+                    <constraint firstItem="bFL-Qr-tBa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="mkR-ru-sqG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

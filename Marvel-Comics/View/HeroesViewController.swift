@@ -7,7 +7,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import Kingfisher
 import Combine
 
@@ -17,6 +16,7 @@ class HeroesViewController: UIViewController {
     
     var anycancellable: [AnyCancellable] = []
     var heroViewModel = HeroViewModel()
+    var heroesList: [HeroModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +28,12 @@ class HeroesViewController: UIViewController {
     }
     
     private func suscriptions() {
-        heroViewModel.heroList.sink { _ in } receiveValue: {[weak self] heroe in
+        heroViewModel.heroList.sink { _ in } receiveValue: {[weak self] heroes in
             print("success")
-            print(heroe)
+            DispatchQueue.main.async {
+                self?.heroesList = heroes
+                self?.tableView.reloadData()
+            }
         }.store(in: &anycancellable)
 
     }
@@ -41,13 +44,13 @@ class HeroesViewController: UIViewController {
 extension HeroesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return heroesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HeroeTableViewCell
-        cell.heroeNameLabel.text = "HeroeDEfault\nhjgfiure\nsghfie\n"
-        cell.heroeImage.image = UIImage(named: "spiderman")
+        cell.heroeNameLabel.text = "Name:\n\(heroesList[indexPath.row].name)"
+        cell.heroeImage.setImage(imageURL: heroesList[indexPath.row].imageURL)
         return cell
     }
 }

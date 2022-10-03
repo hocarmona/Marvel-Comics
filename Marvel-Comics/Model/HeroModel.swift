@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import Kingfisher
 
 struct HeroModel {
     
