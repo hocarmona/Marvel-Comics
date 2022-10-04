@@ -25,6 +25,7 @@ class HeroesViewController: UIViewController {
         tableView.delegate = self
         suscriptions()
         heroViewModel.fetchData()
+        title = "Heroes Marvel Comics"
     }
     
     private func suscriptions() {
@@ -58,7 +59,33 @@ extension HeroesViewController: UITableViewDataSource {
 //MARK: -TableView Delegate Methods
 extension HeroesViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToDetalles", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationvc = segue.destination as! DetallesViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationvc.heroName = heroesList[indexPath.row].name
+            destinationvc.heroeSeries = heroesList[indexPath.row].series
+            destinationvc.heroeImageURL = heroesList[indexPath.row].imageURL
+            destinationvc.heroeDescription = heroesList[indexPath.row].description
+        }
+        
+    }
 }
+
+//override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//    performSegue(withIdentifier: "goToItems", sender: self)
+//}
+//
+//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    let destinationVC = segue.destination as! TodoListViewController
+//
+//    if let indexPath = tableView.indexPathForSelectedRow {
+//        destinationVC.selectedCategory = categories[indexPath.row]
+//    }
+//}
     
 
 
