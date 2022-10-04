@@ -32,6 +32,7 @@ class DetallesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Detalles"
         tableView.dataSource = self
         heroeImage.setImage(imageURL: heroeImageURL)
         DispatchQueue.main.async {
