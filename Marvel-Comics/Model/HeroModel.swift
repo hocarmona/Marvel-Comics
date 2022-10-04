@@ -17,7 +17,7 @@ struct HeroModel {
     let imageExtension: String
     let series: [String]?
     
-    // Atributo que apunta a la URL de la imagen uniendo la URL base con la extension y sustituyendo HTTPS en lugar de HTTP para poder acceder y hacerlo de manera sefura.
+    // Atributo que apunta a la URL de la imagen uniendo la URL base con la extension y sustituyendo HTTPS en lugar de HTTP para poder acceder y hacerlo de manera sefura
     var imageURL: String {
         let string = imagePath.dropFirst(7) // Eliminar "http://" para despues agregarle "https://".
         return "https://" + string + "." + imageExtension // Unir "https://" con la URL base mas la extension.
