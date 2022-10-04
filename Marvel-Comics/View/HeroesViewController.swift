@@ -63,30 +63,21 @@ extension HeroesViewController: UITableViewDelegate {
         performSegue(withIdentifier: "goToDetalles", sender: self)
     }
     
+    // Transferencia de datos hacia el proximo controlador a mostrar.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationvc = segue.destination as! DetallesViewController
-        if let indexPath = tableView.indexPathForSelectedRow {
-            destinationvc.heroName = heroesList[indexPath.row].name
-            destinationvc.heroeSeries = heroesList[indexPath.row].series
-            destinationvc.heroeImageURL = heroesList[indexPath.row].imageURL
-            destinationvc.heroeDescription = heroesList[indexPath.row].description
+        if segue.identifier == "goToDetalles" {
+            let destinationvc = segue.destination as! DetallesViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                destinationvc.heroName = heroesList[indexPath.row].name
+                destinationvc.heroeSeries = heroesList[indexPath.row].series
+                destinationvc.heroeImageURL = heroesList[indexPath.row].imageURL
+                destinationvc.heroeDescription = heroesList[indexPath.row].description
+            }
         }
         
     }
 }
 
-//override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    performSegue(withIdentifier: "goToItems", sender: self)
-//}
-//
-//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    let destinationVC = segue.destination as! TodoListViewController
-//
-//    if let indexPath = tableView.indexPathForSelectedRow {
-//        destinationVC.selectedCategory = categories[indexPath.row]
-//    }
-//}
-    
 
 
 

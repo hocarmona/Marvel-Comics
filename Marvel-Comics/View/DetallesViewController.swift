@@ -10,18 +10,21 @@ import Kingfisher
 
 class DetallesViewController: UIViewController {
     
+    //MARK: - propiedades superheroe
     var heroName: String = ""
     var heroeDescription: String? = ""
     var heroeImageURL: String = ""
     var heroeSeries: [String]? = []
-    var categoryArray: [String] = ["Nombre:", "Biografia:", "Series:"]
     var serieString: String? {
         var newString = ""
         for index in 0..<(heroeSeries?.count ?? 0) {
             newString.append(heroeSeries?[index] ?? "No Descripcion")
+            newString += "\n\n"
         }
         return newString
     }
+    //MARK: - Datos para tableview DataSource
+    var categoryArray: [String] = ["Nombre:", "Biografia:", "Series:"]
     var infoArray: [String] = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -38,6 +41,9 @@ class DetallesViewController: UIViewController {
     }
     
 }
+
+
+//MARK: - TableView DataSource Methods.
 
 extension DetallesViewController: UITableViewDataSource {
     
